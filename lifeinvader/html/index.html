@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@800&family=Passero+One&family=Poppins:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Rajdhani:wght@600;700&family=Roboto:wght@500&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Inter:wght@400;600;700&family=Montserrat:wght@800&family=Passero+One&family=Poppins:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Rajdhani:wght@600;700&family=Roboto:wght@500&family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>lifeinvader for my niggs</title>
+</head>
+
+<style>
+.box {
+    box-sizing: border-box;   
+    position: absolute;
+    width: 1062px;
+    height: 743px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--clr-background);
+    border: 3px solid var(--clr-main); 
+    border-radius: 40px;
+}
+ 
+.head-txt {
+    position: absolute;
+    width: 177px;
+    height: 42px;
+    left: 43px;
+    top: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: var(--clr-text);
+}
+
+.btn-werbung {
+    box-sizing: border-box;
+    position: absolute;
+    width: 185px;
+    height: 63px;
+    left: 346px;
+    top: 112px;
+    background: #313131;
+    border: 3px solid var(--clr-main);
+    border-radius: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 40px;
+    color: var(--clr-text);
+}
+
+.btn-create {
+    box-sizing: border-box;
+    position: absolute;
+    width: 185px;
+    height: 63px;
+    left: 579px;
+    top: 112px;
+    background: #313131;
+    border: 3px solid var(--clr-main);
+    border-radius: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 40px;
+    color: var(--clr-text);
+}
+
+.leftbox {
+    position: absolute;
+    width: 488px;
+    height: 503px;
+    left: 43px;
+    top: 217px;
+    background: linear-gradient(180deg, #313131 0%, #393939 100%);
+    border-radius: 20px;
+}
+
+.img {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.info-bg {
+    position: absolute;
+    width: 385px;
+    height: 189px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #675F5F;
+    border-radius: 10px;
+}
+
+.info-top {
+    position: absolute;
+    width: 89px;
+    height: 68px;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%,-50%);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 68px;
+    color: var(--clr-text);
+}
+
+.info-main-txt {
+    position: absolute;
+    width: 354px;
+    height: 100px;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--clr-text);
+}
+
+.btm-info {
+    position: absolute;
+    white-space: nowrap;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Grand Hotel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 48px;
+    color: var(--clr-text);
+}
+
+.info__info {
+    position: absolute;
+    white-space: nowrap;
+    left: 579px;
+    top: 217px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    color: var(--clr-text);
+}
+
+input[type=text] {
+    position: absolute;
+    width: 443px;
+    height: 238px;
+    left: 580px;
+    top: 271px;
+    background: linear-gradient(180deg, #313131 0%, #393939 100%);
+    border-radius: 20px;
+    border: none; 
+    outline: none;
+    font-size: 20px; 
+    color: white;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+#anonym {
+    position: absolute;
+    width: 216px;
+    height: 102px;
+    left: 580px;
+    top: 529px;
+    -webkit-appearance: initial;
+    background: linear-gradient(180deg, #313131 0%, #393939 100%);
+    border-radius: 20px;
+    transition: transform 0.1s ease-in-out;
+}
+
+#anonym:checked {
+    border: 2px var(--clr-main) solid;
+    box-shadow: 0px 0px 0px 1px #00b3ffbd;
+    transform: scale(0.9);
+}
+
+#anonym-icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 662px;
+    top: 543px;
+}
+
+#anonym__text {
+    position: absolute;
+    width: 84px;
+    height: 30px;
+    left: 646px;
+    top: 588px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+#normal {
+    position: absolute;
+    width: 216px;
+    height: 102px;
+    left: 807px;
+    -webkit-appearance: initial;
+    top: 529px;
+    background: linear-gradient(180deg, #313131 0%, #393939 100%);
+    border-radius: 20px;
+    transition: transform 0.1s ease-in-out;
+}
+
+#normal__icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 889px;
+    top: 543px;
+}
+
+#normal__text {
+    position: absolute;
+    width: 155px;
+    height: 30px;
+    left: 838px;
+    top: 588px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+#normal:checked {
+    border: 2px var(--clr-main) solid;
+    box-shadow: 0px 0px 0px 1px #00b3ffbd;
+    transform: scale(0.9);
+}
+
+.btn__send {
+    box-sizing: border-box;
+    position: absolute;
+    width: 443px;
+    height: 51px;
+    left: 580px;
+    top: 669px;
+    background: linear-gradient(180deg, #313131 0%, #393939 100%);
+    border: 3px solid var(--clr-main);
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    color: var(--clr-text);
+}
+
+.werbung__box {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1062px;
+    height: 743px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--clr-background);
+    border: 3px solid var(--clr-main); 
+    border-radius: 40px;
+}
+
+.app__bg {
+    position: absolute;
+    width: 933px;
+    height: 505px;
+    left: 90px;
+    top: 206px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.inner {
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+    width: 907px;
+    height: 95px;
+    left: 0px;
+    top: 40px;
+    background: #454545;
+    border-radius: 17px;
+}
+
+.name {
+    position: absolute;
+    white-space: nowrap;
+    left: 42px;
+    top: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 40px;
+    color: var(--clr-text);
+}
+
+.msg {
+    position: absolute;
+    width: 865px;
+    height: 36px;
+    left: 42px;
+    top: 45px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--clr-text); 
+}
+
+.app__bg::-webkit-scrollbar {
+    width: 5px;
+}
+
+.app__bg::-webkit-scrollbar-track {
+    background: #D9D9D9;
+    border-radius: 10px;
+}
+
+.app__bg::-webkit-scrollbar-thumb {
+    background: #494949;
+    border-radius: 10px;
+}
+</style> 
+  
+
+<body>   
+    <div class="content" style="display: none;">  
+        <div class="box">
+            <span class="head-txt"></span>
+            <button class="btn-werbung">WERBUNG</button>
+            <button class="btn-create">ERSTELLEN</button>
+ 
+            
+
+            <span class="info__info">WERBUNG <span style="color: var(--clr-main);">SCHALTEN</span></span>
+            <input type="text" id="text__field" placeholder="Schreibe hier deine Werbung">
+            <input type="checkbox" id="anonym">
+            <img id="anonym-icon" src="https://cdn.discordapp.com/attachments/1031883885342117918/1031890506881454090/unknown.png">
+            <span id="anonym__text">Anonym</span>
+
+
+            <input type="checkbox" id="normal">
+            <img id="normal__icon" src="https://cdn.discordapp.com/attachments/1031883885342117918/1031892580918624256/unknown.png">
+            <span id="normal__text">Namen Senden</span>
+            
+            <button class="btn__send" onclick="SendAd()">ERSTELLEN</button>
+        </div>  
+
+        <div class="werbung__box" style="display: none;">
+            <span class="head-txt"></span>  
+            <button class="btn-werbung">WERBUNG</button>
+            <button class="btn-create">ERSTELLEN</button>
+
+            <div class="app__bg">
+                 
+            </div>
+        </div>
+    </div>
+</body>   
+</html>
