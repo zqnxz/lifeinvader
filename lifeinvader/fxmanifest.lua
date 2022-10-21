@@ -4,6 +4,7 @@ game 'gta5'
 owner 'qnx'  
 discord 'https://discord.gg/edPB9QQaTG'
 github 'https://github.com/zqnxz' 
+DESIGN_CREDITS 'webservices-discord.gg/webservices'
 
 client_scripts {
     'config/*.lua',
