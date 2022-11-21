@@ -63,7 +63,7 @@ Citizen.CreateThread(function()
                     ESX.TriggerServerCallback('fetchAds', function(cb) 
                         for k,v in pairs(cb) do 
                             SendNUIMessage({
-                                type = 'add',
+                                action = 'add',
                                 name = v.name,
                                 msg = v.msg
                             })  
@@ -95,7 +95,7 @@ end)
 Citizen.CreateThread(function()
     if Config.blip.enabled then
         local blip = AddBlipForCoord(vector3(Config.position)) 
-        SetBlipSprite(blip, Config.blip.sprite)
+        SetBlipSprite(blip, Config.blip.sprite) 
         SetBlipScale(blip, Config.blip.scale)  
         SetBlipColour(blip, Config.blip.color)
         SetBlipDisplay(blip, Config.blip.display)  

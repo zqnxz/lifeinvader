@@ -1,23 +1,29 @@
-window.addEventListener('message', function(event) {
-    var item = event.data;
-    if(item.action == 'InSideMenu') {
-        if(item.status == true) { 
-            $('.content').fadeIn(); 
-            $('.head-txt').text(item.servername)
+window.addEventListener('message', function(e) {
+    var e = e.data;
+    switch(e.action) {
+        case 'InSideMenu':
+            switch(e.status) {
+                case true:
+                    $('.content').fadeIn(); 
+                    $('.head-txt').text(item.servername)
 
-            document.onkeyup = function(data) { 
-                if (data.which == 27) {  
-                    close() 
+                    document.onkeyup = function(data) { 
+                        if (data.which == 27) {  
+                            close() 
+                            $(".app__bg").empty()
+                        }  
+                    };
+                    break;
+                case false: 
+                    close();
                     $(".app__bg").empty()
-                }  
-            };
-        } else { 
-            close();
-            $(".app__bg").empty()
-        }
-    }else if(item.type == 'add') {
-        newAd(item.name, item.msg)
-    }  
+                    break;
+            }
+            break; 
+        case 'add':
+            newAd(e.name, e.msg);
+            break; 
+    } 
 })
 
   
