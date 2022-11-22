@@ -59,7 +59,7 @@ const newAd = (name, msg) => {
     `)
 }
 
-function close() {
+const close = () => {
     $.post('https://lifeinvader/close', JSON.stringify({}))
     $('.content').fadeOut();
     return 
