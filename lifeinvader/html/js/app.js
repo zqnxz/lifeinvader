@@ -20,14 +20,14 @@ window.addEventListener('message', function(e) {
                     break;
             }
             break; 
-        case 'add':
+        case 'add': 
             newAd(e.name, e.msg);
             break; 
     } 
 })
 
   
-function SendAd() {
+const SendAd = () => {
     let werbemsg = $('#text__field').val()
     if(!werbemsg) { 
         $.post('https://lifeinvader/Message__Error', JSON.stringify({}))
@@ -47,11 +47,12 @@ function SendAd() {
                     text: $('#text__field').val(),
                 })) 
             }    
-        }    
+        }     
     } 
 }
- 
-function newAd(name, msg) { 
+
+
+const newAd = (name, msg) => {
     $('.app__bg').append(` 
         <div class="inner">    
             <span class="name">${name}</span>
