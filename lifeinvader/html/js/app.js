@@ -65,12 +65,12 @@ function close() {
     return 
 }
  
-$('.btn-werbung').click(function() {
+$('.btn-werbung').click(() => {
     $('.box').hide()
     $('.werbung__box').show()
 })
 
-$('.btn-create').click(function() {
+$('.btn-create').click(() => {
     $('.box').show() 
     $('.werbung__box').hide()
 })
