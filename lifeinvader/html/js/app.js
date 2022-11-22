@@ -30,12 +30,12 @@ window.addEventListener('message', function(e) {
 const SendAd = () => {
     let werbemsg = $('#text__field').val()
     if(!werbemsg) { 
-        $.post('https://lifeinvader/Message__Error', JSON.stringify({}))
-    } else {
+        return $.post('https://lifeinvader/Message__Error', JSON.stringify({}))
+    }
         //double check 
         if($("#anonym").is(':checked') && $('#normal').is(':checked')) {
-            $.post('https://lifeinvader/checked__error', JSON.stringify({})) 
-        } else {
+            return $.post('https://lifeinvader/checked__error', JSON.stringify({})) 
+        }
             if($("#anonym").is(':checked')) {
                 $.post('https://lifeinvader/anonym', JSON.stringify({
                     text: $('#text__field').val(),
@@ -45,10 +45,8 @@ const SendAd = () => {
             if($("#normal").is(':checked')) {
                 $.post('https://lifeinvader/normal', JSON.stringify({
                     text: $('#text__field').val(),
-                })) 
-            }    
-        }     
-    } 
+                }))  
+            }        
 }
 
 
