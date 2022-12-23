@@ -19,7 +19,7 @@ Config.language = {
     globalMessageTitle = "Lifeinvader",
     globalMessageSubtitle = "~g~neue Werbung von %s",
 }   
-  
+   
 Config.marker = {      
     type = 21,
     rotate = true,

@@ -76,11 +76,11 @@ Citizen.CreateThread(function()
 end)  
 
 RegisterNUICallback('anonym', function(data) 
-    TriggerServerEvent('send__anonym', data.text)    
+    TriggerServerEvent('qnx:sendAnonym', data.text)    
 end)
  
 RegisterNUICallback('normal', function(data)
-    TriggerServerEvent('send__normal', data.text)
+    TriggerServerEvent('qnx:sendNormal', data.text)
 end)
 
 RegisterNUICallback('Message__Error', function() 
